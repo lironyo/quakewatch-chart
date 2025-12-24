@@ -1,0 +1,26 @@
+name: Test Helm Chart
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ "*" ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Helm
+        uses: azure/setup-helm@v4
+        with:
+          version: v3.14.0
+
+      - name: Helm lint
+        run: helm lint ./quakewatch-chart/
+
+      - name: Validate templates
+        run: helm template quakewatch ./quakewatch-chart/ -f values-prod.yaml
