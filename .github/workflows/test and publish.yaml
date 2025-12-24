@@ -23,7 +23,7 @@ jobs:
 
       - name: Lint chart
         run: |
-          helm lint .
+          helm lint ./quakewatch-chart
 
       - name: Template chart with prod values
         run: |
