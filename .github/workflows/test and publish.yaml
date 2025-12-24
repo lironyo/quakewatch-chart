@@ -27,7 +27,7 @@ jobs:
 
       - name: Template chart with prod values
         run: |
-          helm template quakewatch . -f prod-values.yaml
+          helm template quakewatch . -f values-prod.yaml
 
   publish:
     name: Publish to Docker Hub
