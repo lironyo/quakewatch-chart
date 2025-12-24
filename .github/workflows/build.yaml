@@ -1,0 +1,26 @@
+name: Build Helm Chart
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Helm
+        uses: azure/setup-helm@v4
+        with:
+          version: v3.14.0
+
+      - name: Helm dependency build
+        run: helm dependency build ./quakewatch-chart/
+
+      - name: Helm package
+        run: helm package ./quakewatch-chart/
