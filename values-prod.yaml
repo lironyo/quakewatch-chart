@@ -1,4 +1,5 @@
-replicaCount: 400
+
+replicaCount: 5
 
 image:
   tag: "v1.0.0"
