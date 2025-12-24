@@ -1,0 +1,17 @@
+# PyCharm
+.idea/
+.vscode/
+venv/
+__pycache__/
+
+Thumbs.db
+.DS_Store
+
+# Helm
+*.tgz
+charts/
+tmpcharts/
+
+# Secrets
+.env
+secret-values.yaml
