@@ -53,4 +53,4 @@ jobs:
 
       - name: Push chart to Docker Hub
         run: |
-          helm push quakewatch-chart-1.0.${{ github.run_number }}.tgz oci://registry-1.docker.io/lironyo98
+          helm push quakewatch-chart-1.0.${{ github.run_number }}.tgz oci://registry-1.docker.io/${{ secrets.DOCKER_USERNAME }}
