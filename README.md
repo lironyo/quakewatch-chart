@@ -62,4 +62,3 @@ The chart automatically syncs with the main application repository. Version tags
 ## 🔗 Links
 
 - [Application Repository](https://github.com/lironyo/quakewatch)
-- [Docker Image](https://hub.docker.com/r/lironyo98/flask_quakeqatch)
