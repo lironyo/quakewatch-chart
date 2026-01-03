@@ -2,7 +2,7 @@ replicaCount: 3
 
 image:
   repository: lironyo98/flask_quakeqatch
-  tag: "latest"
+  tag: "0.2.0"
   pullPolicy: IfNotPresent
 
 containerPort: 5000
